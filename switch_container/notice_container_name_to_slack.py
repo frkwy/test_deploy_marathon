@@ -12,4 +12,4 @@ if __name__ == '__main__':
     sc = SlackClient(args.token)
     sc.rtm_connect()
     #sc.rtm_send_message(channel=args.channel, message="{} でデプロイしましたですよ".format(find_latest().id))
-    sc.rtm_send_message(channel=args.channel, message="{} でデプロイしましたですよ".format(find_latest()))
+    sc.rtm_send_message(channel=args.channel, message="{} でデプロイしましたですよ〜".format(find_latest()))

@@ -30,4 +30,3 @@ if __name__ == '__main__':
     #parser.add_argument('image_name', help='project_name via test1', type=str)
     parser.add_argument('--version', required=False, type=int,  help='project-version')
     args = parser.parse_args()
-    #print (find_latest().id)
