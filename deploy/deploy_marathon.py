@@ -59,11 +59,17 @@ def remove_all():
         requests.delete("http://10.141.141.10:8080/v2/apps/" + app.id)
 
 
+def remove_above_latest():
+    for app in c.list_apps():
+        if app.id != find_latest().id:
+            requests.delete("http://10.141.141.10:8080/v2/apps/" + app.id)
+
+
 if __name__ == "__main__":
     import argparse
     parser = argparse.ArgumentParser()
-    parser.add_argument("image_name", help="project_name via test1",
-                                type=str)
+    parser.add_argument("image_name", help="project_name via test1", type=str)
     parser.add_argument("--version", required=False, type=int,  help="project-version")
     args = parser.parse_args()
     deploy(image_name=args.image_name, id=args.version)
+    remove_above_latest()
