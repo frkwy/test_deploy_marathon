@@ -1,7 +1,8 @@
 import re
 import datetime
-import argparse
+import urllib
 import requests
+import argparse
 from marathon import MarathonClient
 
 MARATHON_URL = 'http://10.141.141.10:8080/'
@@ -22,11 +23,11 @@ def find_latest():
         if convert_datetime(app.version) > \
                 convert_datetime(latest_app.version):
             latest_app = app
-    return latest_app
+    return MARATHON_URL + "ui/#/apps/" + urllib.parse.quote(latest_app.id, safe="")
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser()
     #parser.add_argument('image_name', help='project_name via test1', type=str)
     parser.add_argument('--version', required=False, type=int,  help='project-version')
     args = parser.parse_args()
-    print (find_latest().id)
+    #print (find_latest().id)
