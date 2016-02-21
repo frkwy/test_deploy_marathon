@@ -7,7 +7,6 @@ def generate_build_task(destination="test"):
 
     DESTINATION = destination
     TASK = yml[TASK[destination]]
-
     with open('build.sh', 'w') as f:
         for y in TASK.get('Required'):
             f.write('cp -rf {} {}\n'.format(y, DESTINATION))
@@ -22,7 +21,6 @@ def generate_build_task(destination="test"):
                                                                     sub_name=sub_name,
                                                                     version=version)
         f.write ('docker build -t {project_name} .\n'.format(project_name=project_name))
-
         volume = "mkdir {}\n.format".format(TASK['Volume'][0]) if TASK['Volume'][0] else ''
         if volume:
             volume_path = "-v `pwd`/{}/tmp".format(volume)
