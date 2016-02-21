@@ -5,7 +5,7 @@ COPY requirements.txt .
 RUN pip3 install --upgrade pip
 RUN pip3 install wheel
 RUN mkdir wheel
-RUN pip3 wheel --wheel=wheel -r requirements
+RUN pip3 wheel --wheel=wheel -r requirements.txt
 
 
 

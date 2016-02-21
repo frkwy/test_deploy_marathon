@@ -4,7 +4,7 @@ COPY requirements.txt .
 RUN pip3 install --upgrade pip
 RUN pip3 install wheel
 RUN mkdir wheel
-RUN pip3 wheel --wheel=wheel -r requirements
+RUN pip3 wheel --wheel=wheel -r requirements.txt
 #RUN pip3 install -r requirements.txt
 COPY deploy_marathon.py .
 CMD ["python3", "deploy_marathon.py", "yusukefurukawa/test"]
