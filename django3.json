@@ -1,0 +1,22 @@
+{
+  "id": "bridged-webapp-django3",
+  "cpus": 0.5,
+  "mem": 64.0,
+  "labels": {
+      "name": "test1",
+      "environment": "staging"
+  },
+  "instances": 2,
+  "container": {
+    "type": "DOCKER",
+    "docker": {
+      "image": "yusukefurukawa/test:v0.0.3",
+      "network": "BRIDGE",
+      "portMappings": [
+        { "containerPort": 8000, "hostPort": 0, "servicePort": 9003, "protocol": "tcp" }
+      ]
+    }
+  },
+  "args": ["python", "manage.py", "runserver", "0.0.0.0:8000"]
+}
+
