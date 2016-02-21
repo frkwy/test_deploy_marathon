@@ -65,7 +65,6 @@ def remove_above_latest():
 
 
 if __name__ == "__main__":
-    remove_above_latest()
     import argparse
     parser = argparse.ArgumentParser()
     parser.add_argument("image_name", help="project_name via test1",
@@ -73,3 +72,4 @@ if __name__ == "__main__":
     parser.add_argument("--version", required=False, type=int,  help="project-version")
     args = parser.parse_args()
     deploy(image_name=args.image_name, id=args.version)
+    remove_above_latest()
