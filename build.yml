@@ -10,7 +10,7 @@ Tests:
         - tests
     Required:
         - wheel
-        - testtestest
+        - testtesttest
     Volume:
         - volume1
 Build:
