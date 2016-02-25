@@ -1,0 +1,29 @@
+Projects:
+    Name:
+        - my_dead_girlfriend
+    SubName:
+        - hoghoge
+    Version:
+        - 0.0.1
+Tests:
+    Phase:
+        - tests
+    Required:
+        - wheel
+        - testtesttest
+    Volume:
+        - volume1
+Build:
+    Phase:
+        - build
+    Required:
+        - wheel
+    Volume:
+        - null
+Deploy:
+    Phase:
+        - deploy
+    Required:
+        - wheel
+    Volume:
+        - null

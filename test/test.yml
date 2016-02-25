@@ -1,0 +1,15 @@
+Projects:
+    Name:
+        - my_dead_girlfriend
+    SubName:
+        - null
+    Version:
+        - 0.0.1
+Tests:
+    Required:
+        - wheel
+        - testtesttest
+    Volume:
+        - null
+
+
