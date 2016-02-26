@@ -1,0 +1,7 @@
+cp -rf wheel tests
+cp -rf testtesttest tests
+
+cd tests
+docker build -t yusukefurukawa/test .
+mkdir share_volume
+docker run -v "`pwd`/share_volume/":/tmp yusukefurukawa/test
