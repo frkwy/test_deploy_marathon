@@ -1,3 +1,3 @@
 # test_deploy_marathon
 
-ecosystem a b c
+ecosystem a b c d e f
